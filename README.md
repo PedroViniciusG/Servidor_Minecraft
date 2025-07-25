@@ -40,7 +40,7 @@ Qualquer jogador autorizado pode iniciar o servidor em sua própria máquina e g
 ## ☕ Como adicionar o server.jar
 
 1. Acesse o site oficial da Mojang para baixar a versão desejada do servidor Minecraft:
-   - [Server.jar](https://www.minecraft.net/en-us/download/server)
+    [server.jar](https://www.minecraft.net/en-us/download/server)
 2. Renomeie o arquivo para `server.jar`.
 3. Coloque o arquivo **na raiz da pasta do servidor**, junto com os arquivos `.bat`.
 
