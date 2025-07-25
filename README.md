@@ -151,8 +151,8 @@ Agora:
 ## 📦 Scripts principais (resumo)
 
 - `iniciar.bat`: restaura arquivos do GitHub e inicia o servidor.
-- `scripts/backup_nuvem.bat.bat`: envia alterações para o GitHub ao encerrar.
-- `scripts/restaurar_nuvem.bat.bat`: força a restauração dos arquivos do GitHub.
+- `scripts/backup_nuvem.bat`: envia alterações para o GitHub ao encerrar.
+- `scripts/restaurar_nuvem.bat`: força a restauração dos arquivos do GitHub.
 - `scripts/matar_java.bat`: encerra o processo do servidor manualmente.
 
 ---
