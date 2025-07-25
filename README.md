@@ -1,108 +1,122 @@
-# Servidor_Minecraft
+# 🟩 Servidor Minecraft Colaborativo
 
-🟩 Servidor Minecraft Colaborativo
+Este é um servidor Minecraft com sincronização automática via GitHub.  
+Qualquer jogador autorizado pode iniciar o servidor em sua própria máquina e garantir que o progresso esteja sempre atualizado para todos.
 
-Este é um servidor Minecraft com sincronização automática via GitHub. Qualquer jogador autorizado pode iniciar o servidor em sua própria máquina e garantir que o progresso esteja sempre atualizado para todos.
+---
 
-🚀 Como funciona
+## 🚀 Como funciona
 
-O servidor é sincronizado via Git.
-Nesse repositório estão os scripts e explicações de como iniciar o servidor e fazê-lo funcionar entre vários computadores.
-O servidor pode ser iniciado por qualquer jogador com acesso.
-A conexão entre os jogadores é feita via Radmin VPN.
+- O servidor é sincronizado automaticamente via Git.
+- Este repositório contém os scripts e instruções para iniciar o servidor e sincronizar entre vários computadores.
+- O servidor pode ser iniciado por qualquer jogador com acesso.
+- A conexão entre os jogadores é feita via **Radmin VPN**.
+- Tudo é feito automaticamente ao usar os scripts incluídos.
 
-🧱 Requisitos
+---
 
-Java 21+ instalado
-Git instalado
-server.jar (coloque a versão correspondente na raiz — não está incluído no repositório)
-Acesso ao grupo do Radmin VPN
+## 🧱 Requisitos
 
-📥 Como configurar
+- Java 21+ instalado  
+- Git instalado  
+- `server.jar` (coloque a versão correspondente na raiz — **não está incluído no repositório**)  
+- Acesso ao grupo do Radmin VPN  
 
-🔸 1. Baixando o server.jar
-Acesse o site oficial da Mojang e baixe o arquivo server.jar da versão que deseja usar.
+---
 
-Renomeie o arquivo para server.jar (caso o nome venha diferente).
+## 📁 Estrutura do repositório
 
-Coloque o arquivo na raiz da pasta do servidor (junto com os arquivos iniciar.bat, etc.).
+```
+├── backups/
+├── scripts/
+│   ├── backup_nuvem.bat.bat          # Faz backup para o GitHub
+│   ├── matar_java.bat                # Encerra processos do servidor
+│   └── restaurar_nuvem.bat.bat       # Restaura arquivos do GitHub
+├── iniciar.bat                       # Inicia o servidor normalmente (baixa arquivos atualizados)
+├── iniciar_primeira_vez.bat          # Gatilho inicial (cria estrutura básica)
+```
 
-⚠️ O server.jar não será versionado pelo GitHub, pois é um arquivo externo. Cada jogador deve colocá-lo manualmente.
+---
 
-🔸 2. Baixando e configurando o Radmin VPN
+## ☕ Como adicionar o `server.jar`
 
-Acesse o site oficial do Radmin VPN.
+1. Acesse o site oficial da Mojang para baixar a versão desejada do servidor Minecraft:
+   - [https://www.minecraft.net/en-us/download/server](https://www.minecraft.net/en-us/download/server)
+2. Renomeie o arquivo para `server.jar`.
+3. Coloque o arquivo **na raiz da pasta do servidor**, junto com os arquivos `.bat`.
 
-Baixe e instale o programa normalmente.
+---
 
-Após instalar:
+## 🌐 Como baixar e configurar o Radmin VPN
 
-Abra o Radmin VPN.
+1. Baixe o Radmin VPN em:  
+   [https://www.radmin-vpn.com/](https://www.radmin-vpn.com/)
 
-Clique em "Rede" > "Entrar em uma rede existente".
+2. Instale normalmente.
 
-Insira o nome e a senha da rede compartilhada com os jogadores do servidor.
+3. Crie ou entre em um grupo de rede:
+   - Clique em “Rede” → “Entrar em uma rede existente” ou “Criar rede nova”.
+   - Compartilhe o nome e senha com os outros jogadores.
 
-Pronto! Você estará conectado à mesma rede virtual dos outros jogadores.
+4. O servidor será acessado pelo **IP virtual da rede Radmin**.
 
-🔐 Apenas jogadores com acesso à rede Radmin poderão jogar.
+---
 
-🔸 3. Criando uma conta e repositório privado no GitHub
+## 🔗 Como vincular sua pasta local ao repositório GitHub
 
-Para usar o versionamento e sincronização dos arquivos do servidor, você precisa:
+> ⚠️ *Se você está apenas usando o servidor normalmente, **NÃO precisa executar nenhum comando Git manualmente*** — o `iniciar.bat` **já cuida de tudo automaticamente**.  
+>  
+> Essas instruções são apenas caso precise configurar o servidor pela **primeira vez** ou corrigir algum erro de sincronização.
 
-Ter uma conta gratuita no GitHub.
+---
 
-Criar um repositório privado para armazenar os arquivos do servidor Minecraft (scripts, mundos, configurações, etc.).
+### 📁 1. Escolha o local da pasta do servidor
 
-Configurar este repositório para que só os jogadores autorizados tenham acesso.
+Exemplo:
 
-Esse repositório será o local centralizado onde todos os arquivos atualizados do servidor serão sincronizados e versionados.
+```plaintext
+C:\Users\SeuNome\Desktop\ServidorMinecraft
+```
 
-Importante: O repositório deve ser privado para garantir que apenas os jogadores autorizados possam acessar os arquivos do servidor.
+---
 
-🔸 4. Instalando e configurando o Git
+### 🧠 2. Clonar o repositório GitHub (primeira vez)
 
-4.1 Baixando e instalando o Git
-Acesse o site oficial do Git: https://git-scm.com/downloads
+Abra o **Prompt de Comando** e digite:
 
-Baixe a versão para seu sistema operacional (Windows, Mac ou Linux) e instale seguindo as instruções padrão.
+```bash
+cd "C:\Users\SeuNome\Desktop"
+git clone https://github.com/SeuUsuario/ServidorMinecraft.git
+```
 
-4.2 Configurando o Git pela primeira vez
-Abra o Prompt de Comando (Windows), Terminal (Mac/Linux) ou o próprio Git Bash (recomendado) e configure seu nome e e-mail (apenas na primeira vez):
+---
 
+### 🛠️ 3. (Opcional) Se já tiver uma pasta com arquivos antigos
 
-git config --global user.name "Seu Nome"
-git config --global user.email "seu-email@example.com"
+Se você já tem a pasta do servidor e quer **vincular ao GitHub**, faça:
 
-4.3 Configurando autenticação com GitHub
-Para evitar pedir login/senha sempre, configure autenticação por SSH ou use o Git Credential Manager (no Windows) para HTTPS.
+```bash
+cd "C:\Users\SeuNome\Desktop\ServidorMinecraft"
+git init
+git remote add origin https://github.com/SeuUsuario/ServidorMinecraft.git
+git pull origin main --allow-unrelated-histories
+```
 
-Configurar SSH (recomendado)
-Gere uma chave SSH (se ainda não tiver):
+---
 
-ssh-keygen -t ed25519 -C "seu-email@example.com"
-Copie o conteúdo da chave pública (~/.ssh/id_ed25519.pub) e adicione no GitHub em:
-Configurações > SSH and GPG keys > New SSH key
+### ✅ Pronto!
 
-Teste a conexão:
+Agora:
 
-ssh -T git@github.com
+- Sempre inicie o servidor com o `iniciar.bat`
+- Ele puxará os arquivos atualizados automaticamente
+- E ao fechar, o backup será feito automaticamente via `backup_nuvem.bat`
 
-Clone o repositório usando o link SSH:
+---
 
-git clone git@github.com:SEU_USUARIO/SEU_REPOSITORIO.git
+## 📦 Scripts principais (resumo)
 
-4.4 Clonando o repositório do servidor
-
-No terminal, escolha a pasta onde deseja colocar o servidor e execute:
-
-
-git clone https://github.com/SEU_USUARIO/SEU_REPOSITORIO.git
-
-ou, se configurou SSH:
-
-git clone git@github.com:SEU_USUARIO/SEU_REPOSITORIO.git
-Substitua SEU_USUARIO e SEU_REPOSITORIO pelos seus dados no GitHub.
-
-
+- `iniciar.bat`: restaura arquivos do GitHub e inicia o servidor.
+- `scripts/backup_nuvem.bat.bat`: envia alterações para o GitHub ao encerrar.
+- `scripts/restaurar_nuvem.bat.bat`: força a restauração dos arquivos do GitHub.
+- `scripts/matar_java.bat`: encerra o processo do servidor manualmente.
