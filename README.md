@@ -1,4 +1,4 @@
-# 🟩 Servidor Minecraft Colaborativo
+# 🟩 Servidor Minecraft
 
 Este é um servidor Minecraft com sincronização automática via GitHub. Qualquer jogador autorizado pode iniciar o servidor em sua própria máquina, e todas as alterações no mundo serão sincronizadas automaticamente com os outros participantes.
 
