@@ -33,6 +33,7 @@ Qualquer jogador autorizado pode iniciar o servidor em sua própria máquina e g
 │   ├── matar_java.bat                # Encerra processos do servidor
 │   └── restaurar_nuvem.bat.bat       # Restaura arquivos do GitHub
 ├── iniciar.bat                       # Inicia o servidor normalmente (baixa arquivos atualizados)
+├── server.jar                        # Cria toda configuração inical do servidor
 ├── iniciar_primeira_vez.bat          # Gatilho inicial (cria estrutura básica)
 ```
 
