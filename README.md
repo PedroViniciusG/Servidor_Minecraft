@@ -1,6 +1,6 @@
 # 🟩 Servidor Minecraft Colaborativo
 
-Este é um servidor Minecraft com sincronização automática via GitHub.  
+Este é um servidor Minecraft com sincronização automática via GitHub.
 Qualquer jogador autorizado pode iniciar o servidor em sua própria máquina e garantir que o progresso esteja sempre atualizado para todos.
 
 ---
@@ -17,10 +17,10 @@ Qualquer jogador autorizado pode iniciar o servidor em sua própria máquina e g
 
 ## 🧱 Requisitos
 
-- Java 21+ instalado  
-- Git instalado  
-- `server.jar` (coloque a versão correspondente na raiz — **não está incluído no repositório**)  
-- Acesso ao grupo do Radmin VPN  
+- Java 21+ instalado
+- Git instalado
+- server.jar (coloque a versão correspondente na raiz — **não está incluído no repositório**)
+- Acesso ao grupo do Radmin VPN
 
 ---
 
@@ -36,9 +36,8 @@ Qualquer jogador autorizado pode iniciar o servidor em sua própria máquina e g
 ├── iniciar_primeira_vez.bat          # Gatilho inicial (cria estrutura básica)
 ```
 
----
-
-## ☕ Como adicionar o `server.jar`
+---\n
+## ☕ Como adicionar o server.jar
 
 1. Acesse o site oficial da Mojang para baixar a versão desejada do servidor Minecraft:
    - [https://www.minecraft.net/en-us/download/server](https://www.minecraft.net/en-us/download/server)
@@ -49,7 +48,7 @@ Qualquer jogador autorizado pode iniciar o servidor em sua própria máquina e g
 
 ## 🌐 Como baixar e configurar o Radmin VPN
 
-1. Baixe o Radmin VPN em:  
+1. Baixe o Radmin VPN em:
    [https://www.radmin-vpn.com/](https://www.radmin-vpn.com/)
 
 2. Instale normalmente.
@@ -62,10 +61,43 @@ Qualquer jogador autorizado pode iniciar o servidor em sua própria máquina e g
 
 ---
 
+## 🔸 4. Instalando e Configurando o Git
+
+1. Baixando e Instalando o Git
+   Acesse o site oficial do Git.
+
+   Baixe a versão para seu sistema operacional (Windows, Mac ou Linux).
+
+   Instale normalmente com as opções padrão.
+
+2. ⚠️ Primeira Vez Usando Git? Vai pedir Nome e Email!
+   Quando você rodar o servidor pela primeira vez, pode aparecer o seguinte aviso no terminal:
+
+```
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "voce@email.com"
+  git config --global user.name "Seu Nome"
+
+to set your account's default identity.
+```
+Esse aviso significa que o Git ainda não sabe quem está fazendo o commit (backup).
+
+Para resolver, basta abrir o terminal (ou Git Bash) e digitar:
+
+```bash
+git config --global user.email "seuemail@exemplo.com"
+git config --global user.name "Seu Nome"
+```
+
+---
+
 ## 🔗 Como vincular sua pasta local ao repositório GitHub
 
-> ⚠️ *Se você está apenas usando o servidor normalmente, **NÃO precisa executar nenhum comando Git manualmente*** — o `iniciar.bat` **já cuida de tudo automaticamente**.  
->  
+> ⚠️ *Se você está apenas usando o servidor normalmente, **NÃO precisa executar nenhum comando Git manualmente*** — o `iniciar.bat` **já cuida de tudo automaticamente**.
+> 
 > Essas instruções são apenas caso precise configurar o servidor pela **primeira vez** ou corrigir algum erro de sincronização.
 
 ---
@@ -110,7 +142,7 @@ Agora:
 
 - Sempre inicie o servidor com o `iniciar.bat`
 - Ele puxará os arquivos atualizados automaticamente
-- E ao fechar, o backup será feito automaticamente via `backup_nuvem.bat`
+- E ao fechar, o backup será feito automaticamente via `backup_nuvem.bat.bat`
 
 ---
 
@@ -120,3 +152,28 @@ Agora:
 - `scripts/backup_nuvem.bat.bat`: envia alterações para o GitHub ao encerrar.
 - `scripts/restaurar_nuvem.bat.bat`: força a restauração dos arquivos do GitHub.
 - `scripts/matar_java.bat`: encerra o processo do servidor manualmente.
+
+---
+
+## 🌐 Como Logar no Servidor Minecraft
+
+Para se conectar ao servidor Minecraft, é necessário utilizar o **IP da pessoa que está hospedando o servidor no momento**, via **Radmin VPN**.
+
+### Como descobrir o IP correto:
+
+1. Abra o Radmin VPN.
+2. Verifique na lista da rede quem está com o servidor online.
+3. Copie o **IP do jogador que está com o servidor rodando**.
+4. No Minecraft, vá em "Multijogador" > "Adicionar servidor".
+5. No campo "Endereço do servidor", cole o IP copiado.
+
+🔁 **Importante:** O IP muda de acordo com quem está hospedando.
+
+Por isso, recomendamos que **apenas 2 ou 3 pessoas sejam responsáveis por iniciar e encerrar o servidor**. Assim, evita-se a necessidade de saber vários IPs diferentes.
+
+### Exemplo:
+
+Se o jogador **Pedro** iniciou o servidor, os outros jogadores devem usar o IP do Pedro no Radmin VPN para entrar. Se o **João** iniciar o servidor no dia seguinte, o IP a ser usado será o do João.
+
+❗ Certifique-se de que apenas **uma pessoa inicie o servidor por vez**, para evitar conflitos.
+
