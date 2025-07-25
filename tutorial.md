@@ -1,4 +1,4 @@
-# 📘 Tutorial Completo — Servidor Minecraft Colaborativo
+# 📘 Tutorial Completo — Servidor Minecraft
 
 Este tutorial foi criado para ensinar passo a passo como configurar, iniciar e jogar em um servidor Minecraft colaborativo com sincronização automática via GitHub.
 
