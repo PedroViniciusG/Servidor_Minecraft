@@ -40,7 +40,7 @@ Qualquer jogador autorizado pode iniciar o servidor em sua própria máquina e g
 ## ☕ Como adicionar o server.jar
 
 1. Acesse o site oficial da Mojang para baixar a versão desejada do servidor Minecraft:
-   - [https://www.minecraft.net/en-us/download/server](https://www.minecraft.net/en-us/download/server)
+   - [Server.jar](https://www.minecraft.net/en-us/download/server)
 2. Renomeie o arquivo para `server.jar`.
 3. Coloque o arquivo **na raiz da pasta do servidor**, junto com os arquivos `.bat`.
 
@@ -49,7 +49,7 @@ Qualquer jogador autorizado pode iniciar o servidor em sua própria máquina e g
 ## 🌐 Como baixar e configurar o Radmin VPN
 
 1. Baixe o Radmin VPN em:
-   [https://www.radmin-vpn.com/](https://www.radmin-vpn.com/)
+   [Radmin](https://www.radmin-vpn.com/)
 
 2. Instale normalmente.
 
@@ -64,13 +64,14 @@ Qualquer jogador autorizado pode iniciar o servidor em sua própria máquina e g
 ## 🔸 Instalando e Configurando o Git
 
 1. Baixando e Instalando o Git
-   Acesse o site oficial do Git.
+   Acesse o site oficial do Git:
+   [GIT](http://git-scm.com/downloads)
 
    Baixe a versão para seu sistema operacional (Windows, Mac ou Linux).
 
    Instale normalmente com as opções padrão.
 
-2. ⚠️ Primeira Vez Usando Git? Vai pedir Nome e Email!
+3. ⚠️ Primeira Vez Usando Git? Vai pedir Nome e Email!
    Quando você rodar o servidor pela primeira vez, pode aparecer o seguinte aviso no terminal:
 
 ```
