@@ -61,7 +61,7 @@ Qualquer jogador autorizado pode iniciar o servidor em sua própria máquina e g
 
 ---
 
-## 🔸 4. Instalando e Configurando o Git
+## 🔸 Instalando e Configurando o Git
 
 1. Baixando e Instalando o Git
    Acesse o site oficial do Git.
