@@ -9,9 +9,9 @@ Este é um servidor Minecraft com sincronização automática via GitHub. Qualqu
 ```
 ├── backups/
 ├── scripts/
-│   ├── backup_nuvem.bat.bat          # Faz backup para o GitHub
+│   ├── backup_nuvem.bat          # Faz backup para o GitHub
 │   ├── matar_java.bat                # Encerra processos do servidor
-│   └── restaurar_nuvem.bat.bat       # Restaura arquivos do GitHub
+│   └── restaurar_nuvem.bat       # Restaura arquivos do GitHub
 ├── iniciar.bat                       # Inicia o servidor normalmente (baixa arquivos atualizados)
 ├── server.jar                        # Cria toda configuração inical do servidor (deve ser baixado manualmente)
 ├── iniciar_primeira_vez.bat          # Gatilho inicial (cria estrutura básica)
